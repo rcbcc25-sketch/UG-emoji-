@@ -175,7 +175,12 @@ bot.add_handler(MessageHandler(auth.add_user_cmd, filters.command("add") & filte
 bot.add_handler(MessageHandler(auth.remove_user_cmd, filters.command("remove") & filters.private))
 bot.add_handler(MessageHandler(auth.list_users_cmd, filters.command("users") & filters.private))
 bot.add_handler(MessageHandler(auth.my_plan_cmd, filters.command("plan") & filters.private))
-
+async def show_random_emojis(message):
+    
+    emojis = ['🐼', '🐶', '🐅', '⚡️', '🚀', '✨', '💥', '☠️', '🥂', '🍾', '📬', '👻', '👀', '🌹', '💀', '🐇', '⏳', '🔮', '🦔', '📖', '🦁', '🐱', '🐻‍❄️', '☁️', '🚹', '🚺', '🐠', '🦋']
+    emoji_message = await message.reply_text(' '.join(random.choices(emojis, k=1)))
+    return emoji_message
+    
 cookies_file_path = os.getenv("cookies_file_path", "youtube_cookies.txt")
 api_url = "http://master-api-v3.vercel.app/"
 api_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNzkxOTMzNDE5NSIsInRnX3VzZXJuYW1lIjoi4p61IFtvZmZsaW5lXSIsImlhdCI6MTczODY5MjA3N30.SXzZ1MZcvMp5sGESj0hBKSghhxJ3k1GTWoBUbivUe1I"
