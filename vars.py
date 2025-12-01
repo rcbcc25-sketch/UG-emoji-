@@ -20,7 +20,7 @@ ADMINS = [int(x) for x in os.environ.get("ADMINS", "8050673236").split()]  # Def
 # Channel Configuration
 PREMIUM_CHANNEL = "https://t.me/ravi1996sindhav"
 # Thumbnail Configuration
-THUMBNAILS = list(map(str, os.environ.get("THUMBNAILS", "https://sensitive-orange-2ndgmnoedd.edgeone.app/IMG_20250727_093946_936.jpg").split()))
+THUMBNAILS = list(map(str, os.environ.get("THUMBNAILS", "https://ibb.co/SwgPNHgT").split()))
 
 # Web Server Configuration
 WEB_SERVER = os.environ.get("WEB_SERVER", "False").lower() == "true"
